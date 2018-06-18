@@ -1,0 +1,228 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+
+.fyp-container {
+    visibility: hidden; /*Will be removed onClick*/
+    width: 96vw;
+    height: 94vh;
+    background-color: #ddd;
+    position: fixed;
+    top: 2vw;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000000;
+    left: 2vw;
+    right: 2vw;
+}
+
+.header {
+    height: 4em;
+    position: absolute;
+    width: 100%;
+    display: block;
+    background-color: #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.75);
+    display: flex;
+    z-index: 100;
+}
+
+.header-left{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-left:after{
+    content:"";
+    border-right:1px solid #000;
+}
+
+a#upload-link, a#portal-link{
+    color: #666;
+    text-decoration: none;
+    font-size: 28px;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+
+.header-right{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.sorter{
+    height: 4em;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    background-color: #444;
+    transition-duration: .5s;
+}
+
+.show-sorter{
+    margin-top:4em;
+}
+
+.fyp-photo-portal{
+    overflow: scroll;
+    height: 50vh;
+    margin-top:4em;
+    background-color: #fff; 
+}
+
+.fyp-photo-upload{
+    overflow: scroll;
+    height: 50vh;
+    margin-top:4em;
+    background-color: #ccc; 
+    display: none;
+}
+
+.drop-area{
+    border: 23px dashed #999;
+    margin: 20px;
+    border-radius: 20px;
+    height: 39vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fyp-container ul{
+    display: grid;
+    grid-column-gap: .25vw;
+    grid-row-gap: .25vw;
+    grid-template-columns: repeat(10, 9.775vw);
+    grid-auto-rows: 10vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fyp-container ul li{
+    cursor: pointer;
+}
+
+.fyp-container ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.control-panel{
+
+}
+
+.switcher{
+    display:flex;
+    justify-content: space-around;
+}
+
+.photo-mode{
+    display: flex;
+    justify-content: space-between;
+    padding:0 20px;
+}
+.slide-show-mode{
+    display: flex;
+    justify-content: space-between;
+    padding:0 20px;
+}
+
+.music{
+    width:100%;
+}
+
+.photo-meta{
+    display:flex;   
+}
+
+
+.thumb-detail {
+    width: 300px;
+    height: 200px;
+    background-color: #ccc;
+    background-image: url(images/icon-media.svg);
+    background-size: 3em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.thumb-detail img{
+    width:300px;
+    min-height: 200px;
+    height: auto;
+    padding: 0;
+    margin:0;
+    border:1px solid #aaa;
+    display: block;
+}
+
+.slideshow-dock{
+    padding: 1em 0 1em;
+}
+
+.time-bar{    
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    color:#fff;
+    text-align: center;
+}
+
+.slides{
+    width: 100%;
+    background-color: chartreuse;
+
+}
+
+.audio-timeline{
+    padding: 2px;
+    background-color: #666;
+}
+
+.song{
+    background-color: red;
+}
+
+
+
+.icon-settings{
+    width:32px;
+    fill:#aaa;
+}
+
+.current-thumb{
+    border:5px solid cornflowerblue;
+}
+
+.layout-template-1{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.layout-template-1 div{
+    border: 1px solid #333;
+    width:100px;
+    height:60px;
+}
+
+.layout-template-1 .one{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+
