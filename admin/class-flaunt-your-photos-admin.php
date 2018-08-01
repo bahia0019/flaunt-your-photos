@@ -72,7 +72,11 @@ class Flaunt_Your_Photos_Admin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'TweenLite', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js', array(), '2018-4-01', true );
+		
+		wp_enqueue_script( 'FYP React', plugin_dir_url( __FILE__ ) . 'fyp-react/src/index.js', array(), '2018-4-01', false );
+		// wp_enqueue_script( 'FYP React App', plugin_dir_url( __FILE__ ) . 'fyp-react/src/App.js', array(), '2018-4-01', true );
+		
+		// wp_enqueue_script( 'TweenLite', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js', array(), '2018-4-01', true );
 		wp_enqueue_script( 'TimelineMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineMax.min.js', array(), '2018-4-01', true );
 		wp_enqueue_script( 'GreensockCSSPlugin', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js', array(), '2018-4-01', true );
 		wp_enqueue_script( 'Swiper Slider', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js', array(), '2018-4-01', false );
@@ -95,7 +99,8 @@ add_action( 'media_buttons', 'fyp_media_button', 15);
 
 // Loads modal into footer.
 function fyp_load_modal() {
-	require_once('partials/flaunt-your-photos-admin-modal.php');
+	require_once('fyp-react/public/fyp-react-modal.php');
+	// require_once('partials/flaunt-your-photos-admin-modal.php');
 }
 add_action( 'admin_footer-post-new.php', 'fyp_load_modal' );
 add_action( 'admin_footer-post.php', 'fyp_load_modal' );
